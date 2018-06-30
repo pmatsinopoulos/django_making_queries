@@ -1,2 +1,3 @@
-from weblog.models.blog import Blog
-from weblog.models.author import Author
+from .blog import Blog
+from .author import Author
+from .entry import Entry
