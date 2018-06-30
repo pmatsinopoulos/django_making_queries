@@ -5,6 +5,9 @@ from django.db import models
 
 
 class Author(models.Model):
+    class Meta:
+        db_table = 'weblog_authors'
+
     name = models.CharField(max_length=200)
     email = models.EmailField()
 
