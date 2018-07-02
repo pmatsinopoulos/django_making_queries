@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'weblog'
+    'django_extensions',
+    'weblog',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Athens'
 
 USE_I18N = True
 
@@ -121,3 +122,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SHELL_PLUS_PRINT_SQL = True
+
+# Truncate sql queries to this number of characters
+SHELL_PLUS_PRINT_SQL_TRUNCATE = 1000
+
+# Specify sqlparse configuration options when printing sql queries to the console
+SHELL_PLUS_SQLPARSE_FORMAT_KWARGS = dict(
+  reindent_aligned=True,
+  truncate_strings=500,
+)

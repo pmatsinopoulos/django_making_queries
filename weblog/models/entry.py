@@ -9,8 +9,8 @@ class Entry(models.Model):
         db_table = 'weblog_entries'
 
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    headline = models.CharField(max_length=255)
-    body_text = models.TextField()
+    headline = models.CharField(max_length=255, default=None)
+    body_text = models.TextField(default=None)
     pub_date = models.DateField()
     mod_date = models.DateField()
     authors = models.ManyToManyField(Author)
